@@ -538,21 +538,21 @@ if __name__ == '__main__':
                         help="Element names of 'A B X' that forms the ABX3 perovskite.")
 
     parser.add_argument('--angles',
-                        type=str, default="0 0 0",
+                        type=str, default="0 0 2.1",
                         help="Rotation angles around x, y, and z axes in unit of degree.\n"
                              "The angle should as small as ~1. \n"
                              "Too large values may lead to unexpected results.")
 
     parser.add_argument('--tilt_pattern',
-                        type=str, default="000",
+                        type=str, default="00-",
                         help="Tilting pattern in the Glazer notation such as '0++' and '---'.")
 
     parser.add_argument('--bond_length',
-                        type=float, default=2.0,
+                        type=float, default=1.9525,
                         help="Distance of the B-X bond length in Angstrom.")
 
     parser.add_argument('-o', '--outfile',
-                        metavar='out.POSCAR.vasp', default='out.POSCAR.vasp',
+                        metavar='out.POSCAR.vasp', default='STOa0a0c-.POSCAR.vasp',
                         help="File name of the output in the VASP POSCAR format.")
 
     parser.add_argument('--test', action="store_true", dest="run_test", default=False,
