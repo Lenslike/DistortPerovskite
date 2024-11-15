@@ -447,7 +447,7 @@ class DistortPerovskite(object):
 
         with open(fname, 'w') as f:
 
-            f.write("%s %s\n" % (syminfo['international'], formula))
+            f.write("%s %s\n" % (syminfo.international, formula))
             f.write("1.000\n")
             for i in range(3):
                 for j in range(3):
@@ -514,7 +514,7 @@ def check_supercell222(write_poscars=False):
         syminfo, _, _, _ = obj.get_symmetrized_structure()
         if write_poscars:
             obj.write_vasp_poscar("%s.POSCAR.vasp" % distortion, to_primitive=to_primitive)
-        print("%s %d " % (syminfo['international'],
+        print("%s %d " % (syminfo.international,
                           len(syminfo['rotations']) / int(round(np.linalg.det(syminfo['transformation_matrix'])))),
               end='')
         if syminfo['number'] == correct_num:
